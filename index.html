@@ -1,5 +1,246 @@
 <!DOCTYPE html>
-<html>
-<head><title>My Secret Site</title></head>
-<body><h1>Hello World! This site is maintenance-free.</h1></body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urmet Plus Multi-Reader - Seamless Access, Unified</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* --- Header --- */
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: lowercase;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .lang-dropdown {
+            background: none;
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            display: flex;
+            height: calc(100vh - 50px);
+            margin-top: 50px;
+            box-sizing: border-box;
+        }
+
+        .hero-left, .hero-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .hero-left {
+            background: linear-gradient(135deg, #e0e0e0 0%, #ffffff 100%);
+            border-right: 1px solid #ddd;
+        }
+
+        .hero-right {
+            background-color: #fff;
+        }
+
+        .product-image-container, .phone-image-container {
+            max-width: 80%;
+            margin-bottom: 20px;
+        }
+
+        .product-image, .phone-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hero-text {
+            max-width: 400px;
+        }
+
+        .hero-subtitle {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .hero-title {
+            font-size: 32px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 0 0 15px 0;
+            color: #000;
+        }
+
+        .hero-description {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+        }
+
+        /* --- New Section: Image Grid --- */
+        .image-grid-section {
+            padding: 60px 30px;
+            background-color: #fff;
+            display: flex;
+            gap: 40px;
+            box-sizing: border-box;
+        }
+
+        .section-header {
+            flex: 0 0 200px; /* Fixed width for the header on the left */
+        }
+
+        .section-header h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            color: #000;
+        }
+
+        .grid-container {
+            flex: 1; /* Grid takes the rest of the space */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 columns in the main grid */
+            gap: 20px;
+        }
+
+        .left-sub-grid {
+            grid-column: 1 / span 2; /* Occupies the first two main columns */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 sub-columns */
+            gap: 20px;
+        }
+
+        .right-images {
+            grid-column: 3; /* Occupies the third main column */
+            display: flex;
+            flex-direction: column; /* Stacks images vertically */
+            gap: 20px;
+        }
+
+        .grid-item {
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #eee;
+            aspect-ratio: 1 / 1; /* Force square ratio for images */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-item img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">urmet</a>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><button class="lang-dropdown">Language ▼</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-left">
+            <div class="product-image-container">
+                <img src="product-multi-reader.png" alt="Urmet Plus Multi-Reader Device" class="product-image">
+            </div>
+            <div class="hero-text">
+                <p class="hero-subtitle">Urmet Plus</p>
+                <h1 class="hero-title">Multi-Reader</h1>
+                <p class="hero-description">
+                    Secure every entry with one device:<br>
+                    QR code, card, or mobile.<br>
+                    One reader. All access. Total control.<br>
+                    Seamless access, unified.
+                </p>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="phone-image-container">
+                <img src="phone-app-mockup.png" alt="Hand holding smartphone with Urmet App" class="phone-image">
+            </div>
+        </div>
+    </section>
+
+    <section class="image-grid-section">
+        <div class="section-header">
+            <h2>Product Showcase</h2>
+        </div>
+        <div class="grid-container">
+            <div class="left-sub-grid">
+                <div class="grid-item"><img src="pic1.png" alt="Showcase Image 1"></div>
+                <div class="grid-item"><img src="pic2.png" alt="Showcase Image 2"></div>
+            </div>
+            <div class="right-images">
+                <div class="grid-item"><img src="pic3.png" alt="Showcase Image 3"></div>
+                <div class="grid-item"><img src="pic4.png" alt="Showcase Image 4"></div>
+                <div class="grid-item"><img src="pic5.png" alt="Showcase Image 5"></div>
+            </div>
+            </div>
+    </section>
+
+</body>
 </html>
